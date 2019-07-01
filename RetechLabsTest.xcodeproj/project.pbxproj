@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57C7B04722CA6E7600C49AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */; };
+		57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04822CA6E7600C49AC0 /* ViewController.swift */; };
+		57C7B04C22CA6E7600C49AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B04A22CA6E7600C49AC0 /* Main.storyboard */; };
+		57C7B04F22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */; };
+		57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05022CA6E7700C49AC0 /* Assets.xcassets */; };
+		57C7B05422CA6E7700C49AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */; };
+		57C7B05F22CA6E7700C49AC0 /* RetechLabsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B05E22CA6E7700C49AC0 /* RetechLabsTestTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57C7B05B22CA6E7700C49AC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57C7B03B22CA6E7600C49AC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57C7B04222CA6E7600C49AC0;
+			remoteInfo = RetechLabsTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57C7B04322CA6E7600C49AC0 /* RetechLabsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetechLabsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57C7B04822CA6E7600C49AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57C7B04B22CA6E7600C49AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57C7B04E22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetechLabsTest.xcdatamodel; sourceTree = "<group>"; };
+		57C7B05022CA6E7700C49AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57C7B05322CA6E7700C49AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57C7B05522CA6E7700C49AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C7B05A22CA6E7700C49AC0 /* RetechLabsTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetechLabsTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C7B05E22CA6E7700C49AC0 /* RetechLabsTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetechLabsTestTests.swift; sourceTree = "<group>"; };
+		57C7B06022CA6E7700C49AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57C7B04022CA6E7600C49AC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C7B05722CA6E7700C49AC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57C7B03A22CA6E7600C49AC0 = {
+			isa = PBXGroup;
+			children = (
+				57C7B04522CA6E7600C49AC0 /* RetechLabsTest */,
+				57C7B05D22CA6E7700C49AC0 /* RetechLabsTestTests */,
+				57C7B04422CA6E7600C49AC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57C7B04422CA6E7600C49AC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B04322CA6E7600C49AC0 /* RetechLabsTest.app */,
+				57C7B05A22CA6E7700C49AC0 /* RetechLabsTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57C7B04522CA6E7600C49AC0 /* RetechLabsTest */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */,
+				57C7B04822CA6E7600C49AC0 /* ViewController.swift */,
+				57C7B04A22CA6E7600C49AC0 /* Main.storyboard */,
+				57C7B05022CA6E7700C49AC0 /* Assets.xcassets */,
+				57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */,
+				57C7B05522CA6E7700C49AC0 /* Info.plist */,
+				57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */,
+			);
+			path = RetechLabsTest;
+			sourceTree = "<group>";
+		};
+		57C7B05D22CA6E7700C49AC0 /* RetechLabsTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B05E22CA6E7700C49AC0 /* RetechLabsTestTests.swift */,
+				57C7B06022CA6E7700C49AC0 /* Info.plist */,
+			);
+			path = RetechLabsTestTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57C7B04222CA6E7600C49AC0 /* RetechLabsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57C7B06322CA6E7700C49AC0 /* Build configuration list for PBXNativeTarget "RetechLabsTest" */;
+			buildPhases = (
+				57C7B03F22CA6E7600C49AC0 /* Sources */,
+				57C7B04022CA6E7600C49AC0 /* Frameworks */,
+				57C7B04122CA6E7600C49AC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetechLabsTest;
+			productName = RetechLabsTest;
+			productReference = 57C7B04322CA6E7600C49AC0 /* RetechLabsTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57C7B05922CA6E7700C49AC0 /* RetechLabsTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57C7B06622CA6E7700C49AC0 /* Build configuration list for PBXNativeTarget "RetechLabsTestTests" */;
+			buildPhases = (
+				57C7B05622CA6E7700C49AC0 /* Sources */,
+				57C7B05722CA6E7700C49AC0 /* Frameworks */,
+				57C7B05822CA6E7700C49AC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57C7B05C22CA6E7700C49AC0 /* PBXTargetDependency */,
+			);
+			name = RetechLabsTestTests;
+			productName = RetechLabsTestTests;
+			productReference = 57C7B05A22CA6E7700C49AC0 /* RetechLabsTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57C7B03B22CA6E7600C49AC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Victor;
+				TargetAttributes = {
+					57C7B04222CA6E7600C49AC0 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					57C7B05922CA6E7700C49AC0 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 57C7B04222CA6E7600C49AC0;
+					};
+				};
+			};
+			buildConfigurationList = 57C7B03E22CA6E7600C49AC0 /* Build configuration list for PBXProject "RetechLabsTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57C7B03A22CA6E7600C49AC0;
+			productRefGroup = 57C7B04422CA6E7600C49AC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57C7B04222CA6E7600C49AC0 /* RetechLabsTest */,
+				57C7B05922CA6E7700C49AC0 /* RetechLabsTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57C7B04122CA6E7600C49AC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C7B05422CA6E7700C49AC0 /* LaunchScreen.storyboard in Resources */,
+				57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */,
+				57C7B04C22CA6E7600C49AC0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C7B05822CA6E7700C49AC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57C7B03F22CA6E7600C49AC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */,
+				57C7B04F22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld in Sources */,
+				57C7B04722CA6E7600C49AC0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C7B05622CA6E7700C49AC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C7B05F22CA6E7700C49AC0 /* RetechLabsTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57C7B05C22CA6E7700C49AC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57C7B04222CA6E7600C49AC0 /* RetechLabsTest */;
+			targetProxy = 57C7B05B22CA6E7700C49AC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57C7B04A22CA6E7600C49AC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57C7B04B22CA6E7600C49AC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57C7B05322CA6E7700C49AC0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57C7B06122CA6E7700C49AC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57C7B06222CA6E7700C49AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57C7B06422CA6E7700C49AC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N28UYC6RTZ;
+				INFOPLIST_FILE = RetechLabsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vsemenov.RetechLabsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57C7B06522CA6E7700C49AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N28UYC6RTZ;
+				INFOPLIST_FILE = RetechLabsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vsemenov.RetechLabsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57C7B06722CA6E7700C49AC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N28UYC6RTZ;
+				INFOPLIST_FILE = RetechLabsTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vsemenov.RetechLabsTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetechLabsTest.app/RetechLabsTest";
+			};
+			name = Debug;
+		};
+		57C7B06822CA6E7700C49AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N28UYC6RTZ;
+				INFOPLIST_FILE = RetechLabsTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vsemenov.RetechLabsTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetechLabsTest.app/RetechLabsTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57C7B03E22CA6E7600C49AC0 /* Build configuration list for PBXProject "RetechLabsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C7B06122CA6E7700C49AC0 /* Debug */,
+				57C7B06222CA6E7700C49AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57C7B06322CA6E7700C49AC0 /* Build configuration list for PBXNativeTarget "RetechLabsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C7B06422CA6E7700C49AC0 /* Debug */,
+				57C7B06522CA6E7700C49AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57C7B06622CA6E7700C49AC0 /* Build configuration list for PBXNativeTarget "RetechLabsTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C7B06722CA6E7700C49AC0 /* Debug */,
+				57C7B06822CA6E7700C49AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57C7B04E22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodel */,
+			);
+			currentVersion = 57C7B04E22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodel */;
+			path = RetechLabsTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 57C7B03B22CA6E7600C49AC0 /* Project object */;
+}
