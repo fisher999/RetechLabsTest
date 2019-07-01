@@ -14,6 +14,12 @@
 		57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05022CA6E7700C49AC0 /* Assets.xcassets */; };
 		57C7B05422CA6E7700C49AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */; };
 		57C7B05F22CA6E7700C49AC0 /* RetechLabsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B05E22CA6E7700C49AC0 /* RetechLabsTestTests.swift */; };
+		57C7B06D22CA6F0F00C49AC0 /* ProductsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B06C22CA6F0F00C49AC0 /* ProductsStorage.swift */; };
+		57C7B07022CA6F9B00C49AC0 /* MDProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B06F22CA6F9B00C49AC0 /* MDProduct.swift */; };
+		57C7B07322CA752800C49AC0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B07222CA752800C49AC0 /* Storage.swift */; };
+		57C7B07522CA756600C49AC0 /* UniqueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B07422CA756600C49AC0 /* UniqueObject.swift */; };
+		57C7B07822CA764800C49AC0 /* UserDefaults+Autoincrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */; };
+		57C7B07A22CA8AE700C49AC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,12 @@
 		57C7B05A22CA6E7700C49AC0 /* RetechLabsTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetechLabsTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C7B05E22CA6E7700C49AC0 /* RetechLabsTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetechLabsTestTests.swift; sourceTree = "<group>"; };
 		57C7B06022CA6E7700C49AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C7B06C22CA6F0F00C49AC0 /* ProductsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStorage.swift; sourceTree = "<group>"; };
+		57C7B06F22CA6F9B00C49AC0 /* MDProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDProduct.swift; sourceTree = "<group>"; };
+		57C7B07222CA752800C49AC0 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		57C7B07422CA756600C49AC0 /* UniqueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueObject.swift; sourceTree = "<group>"; };
+		57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Autoincrement.swift"; sourceTree = "<group>"; };
+		57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 		57C7B03A22CA6E7600C49AC0 = {
 			isa = PBXGroup;
 			children = (
+				57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */,
 				57C7B04522CA6E7600C49AC0 /* RetechLabsTest */,
 				57C7B05D22CA6E7700C49AC0 /* RetechLabsTestTests */,
 				57C7B04422CA6E7600C49AC0 /* Products */,
@@ -79,12 +92,13 @@
 		57C7B04522CA6E7600C49AC0 /* RetechLabsTest */ = {
 			isa = PBXGroup;
 			children = (
-				57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */,
+				57C7B07622CA762A00C49AC0 /* Extensions */,
+				57C7B07122CA751B00C49AC0 /* Protocols */,
+				57C7B06E22CA6F6400C49AC0 /* Model */,
+				57C7B06A22CA6E9500C49AC0 /* Base */,
+				57C7B06922CA6E8500C49AC0 /* Service */,
 				57C7B04822CA6E7600C49AC0 /* ViewController.swift */,
-				57C7B04A22CA6E7600C49AC0 /* Main.storyboard */,
 				57C7B05022CA6E7700C49AC0 /* Assets.xcassets */,
-				57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */,
-				57C7B05522CA6E7700C49AC0 /* Info.plist */,
 				57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */,
 			);
 			path = RetechLabsTest;
@@ -97,6 +111,58 @@
 				57C7B06022CA6E7700C49AC0 /* Info.plist */,
 			);
 			path = RetechLabsTestTests;
+			sourceTree = "<group>";
+		};
+		57C7B06922CA6E8500C49AC0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B06B22CA6EF100C49AC0 /* ProductsStorage */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		57C7B06A22CA6E9500C49AC0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B05522CA6E7700C49AC0 /* Info.plist */,
+				57C7B04A22CA6E7600C49AC0 /* Main.storyboard */,
+				57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */,
+				57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		57C7B06B22CA6EF100C49AC0 /* ProductsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B06C22CA6F0F00C49AC0 /* ProductsStorage.swift */,
+			);
+			path = ProductsStorage;
+			sourceTree = "<group>";
+		};
+		57C7B06E22CA6F6400C49AC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B06F22CA6F9B00C49AC0 /* MDProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57C7B07122CA751B00C49AC0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B07222CA752800C49AC0 /* Storage.swift */,
+				57C7B07422CA756600C49AC0 /* UniqueObject.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		57C7B07622CA762A00C49AC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C7B05422CA6E7700C49AC0 /* LaunchScreen.storyboard in Resources */,
+				57C7B07A22CA8AE700C49AC0 /* Default-568h@2x.png in Resources */,
 				57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */,
 				57C7B04C22CA6E7600C49AC0 /* Main.storyboard in Resources */,
 			);
@@ -200,9 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C7B07022CA6F9B00C49AC0 /* MDProduct.swift in Sources */,
+				57C7B07522CA756600C49AC0 /* UniqueObject.swift in Sources */,
 				57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */,
+				57C7B06D22CA6F0F00C49AC0 /* ProductsStorage.swift in Sources */,
 				57C7B04F22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld in Sources */,
 				57C7B04722CA6E7600C49AC0 /* AppDelegate.swift in Sources */,
+				57C7B07822CA764800C49AC0 /* UserDefaults+Autoincrement.swift in Sources */,
+				57C7B07322CA752800C49AC0 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +438,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N28UYC6RTZ;
-				INFOPLIST_FILE = RetechLabsTest/Info.plist;
+				INFOPLIST_FILE = RetechLabsTest/Base/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +457,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N28UYC6RTZ;
-				INFOPLIST_FILE = RetechLabsTest/Info.plist;
+				INFOPLIST_FILE = RetechLabsTest/Base/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

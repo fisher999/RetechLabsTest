@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol Storage {
+    associatedtype T: UniqueObject
+    
+    func getObjectsFromStorage() -> [T]
+    func saveToStorage(object: T)
+    func removeFromStorage(object: T)
+}
