@@ -11,7 +11,6 @@ import CoreData
 import UIKit
 
 class ProductStorage: Storage {
-    
     typealias T = MDProduct
     
     static var shared: ProductStorage = ProductStorage()
@@ -30,6 +29,10 @@ class ProductStorage: Storage {
     
     func removeFromStorage(object: MDProduct) {
         removeProduct(product: object)
+    }
+    
+    func removeAll() {
+        self.removeAllRequest()
     }
 }
 
@@ -111,7 +114,7 @@ extension ProductStorage {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        fetchRequest.predicate = NSPredicate.init(format: "productID==\(product.id)")
+        fetchRequest.predicate = NSPredicate.init(format: "id==\(product.id)")
         do {
             let objects = try managedContext.fetch(fetchRequest)
             for object in objects {
@@ -121,6 +124,26 @@ extension ProductStorage {
         }
         catch let error {
             print("Could not delete. \(error.localizedDescription)")
+        }
+    }
+    
+    fileprivate func removeAllRequest() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        deleteRequest.resultType = .resultTypeObjectIDs
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let result = try managedContext.execute(deleteRequest) as? NSBatchDeleteResult
+            let objectIDArray = result?.result as? [NSManagedObjectID]
+            let changes: [AnyHashable : Any] = [NSDeletedObjectsKey : objectIDArray as Any]
+            NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [managedContext])
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }

@@ -14,4 +14,5 @@ protocol Storage {
     func getObjectsFromStorage() -> [T]
     func saveToStorage(object: T)
     func removeFromStorage(object: T)
+    func removeAll()
 }
