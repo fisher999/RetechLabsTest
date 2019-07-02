@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2090514C1839EEA355837AED /* Pods_RetechLabsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */; };
 		57C7B04722CA6E7600C49AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */; };
 		57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04822CA6E7600C49AC0 /* ViewController.swift */; };
 		57C7B04C22CA6E7600C49AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B04A22CA6E7600C49AC0 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 		57C7B07822CA764800C49AC0 /* UserDefaults+Autoincrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */; };
 		57C7B07A22CA8AE700C49AC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */; };
 		57ED71F022CB94E5003D625C /* ProductStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED71EF22CB94E5003D625C /* ProductStorageTests.swift */; };
+		57ED71F622CBA41F003D625C /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED71F522CBA41F003D625C /* BaseController.swift */; };
+		9C038FAF18235A2EB8BCB05B /* Pods_RetechLabsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694AAC50092777A3BA945D3 /* Pods_RetechLabsTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetechLabsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C7B04322CA6E7600C49AC0 /* RetechLabsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetechLabsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57C7B04822CA6E7600C49AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +56,12 @@
 		57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Autoincrement.swift"; sourceTree = "<group>"; };
 		57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57ED71EF22CB94E5003D625C /* ProductStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStorageTests.swift; sourceTree = "<group>"; };
+		57ED71F522CBA41F003D625C /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		6489B378B17717FBFD2CB890 /* Pods-RetechLabsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetechLabsTest.release.xcconfig"; path = "Target Support Files/Pods-RetechLabsTest/Pods-RetechLabsTest.release.xcconfig"; sourceTree = "<group>"; };
+		6694AAC50092777A3BA945D3 /* Pods_RetechLabsTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetechLabsTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B820F075BAB98DF4C787DCDE /* Pods-RetechLabsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetechLabsTest.debug.xcconfig"; path = "Target Support Files/Pods-RetechLabsTest/Pods-RetechLabsTest.debug.xcconfig"; sourceTree = "<group>"; };
+		CDF78F132B0BA609277B1FCB /* Pods-RetechLabsTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetechLabsTestTests.debug.xcconfig"; path = "Target Support Files/Pods-RetechLabsTestTests/Pods-RetechLabsTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4FA03668D16DBCEAF772D03 /* Pods-RetechLabsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetechLabsTestTests.release.xcconfig"; path = "Target Support Files/Pods-RetechLabsTestTests/Pods-RetechLabsTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2090514C1839EEA355837AED /* Pods_RetechLabsTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C038FAF18235A2EB8BCB05B /* Pods_RetechLabsTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,8 @@
 				57C7B04522CA6E7600C49AC0 /* RetechLabsTest */,
 				57C7B05D22CA6E7700C49AC0 /* RetechLabsTestTests */,
 				57C7B04422CA6E7600C49AC0 /* Products */,
+				8318219A718CADC3E864CC45 /* Pods */,
+				5999B201DB11DCA381DD72AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +108,7 @@
 		57C7B04522CA6E7600C49AC0 /* RetechLabsTest */ = {
 			isa = PBXGroup;
 			children = (
+				57ED71F122CB9DE1003D625C /* Controllers */,
 				57C7B07622CA762A00C49AC0 /* Extensions */,
 				57C7B07122CA751B00C49AC0 /* Protocols */,
 				57C7B06E22CA6F6400C49AC0 /* Model */,
@@ -168,6 +183,59 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		57ED71F122CB9DE1003D625C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57ED71F422CB9EAF003D625C /* Base */,
+				57ED71F222CB9DFA003D625C /* ProductsListController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57ED71F222CB9DFA003D625C /* ProductsListController */ = {
+			isa = PBXGroup;
+			children = (
+				57ED71F322CB9E2E003D625C /* ViewModel */,
+			);
+			path = ProductsListController;
+			sourceTree = "<group>";
+		};
+		57ED71F322CB9E2E003D625C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		57ED71F422CB9EAF003D625C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				57ED71F522CBA41F003D625C /* BaseController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5999B201DB11DCA381DD72AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */,
+				6694AAC50092777A3BA945D3 /* Pods_RetechLabsTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8318219A718CADC3E864CC45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B820F075BAB98DF4C787DCDE /* Pods-RetechLabsTest.debug.xcconfig */,
+				6489B378B17717FBFD2CB890 /* Pods-RetechLabsTest.release.xcconfig */,
+				CDF78F132B0BA609277B1FCB /* Pods-RetechLabsTestTests.debug.xcconfig */,
+				E4FA03668D16DBCEAF772D03 /* Pods-RetechLabsTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57C7B06322CA6E7700C49AC0 /* Build configuration list for PBXNativeTarget "RetechLabsTest" */;
 			buildPhases = (
+				3582E8A267ABFC6337BE4913 /* [CP] Check Pods Manifest.lock */,
 				57C7B03F22CA6E7600C49AC0 /* Sources */,
 				57C7B04022CA6E7600C49AC0 /* Frameworks */,
 				57C7B04122CA6E7600C49AC0 /* Resources */,
+				72749FE92BC9B35F17618E54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +262,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57C7B06622CA6E7700C49AC0 /* Build configuration list for PBXNativeTarget "RetechLabsTestTests" */;
 			buildPhases = (
+				10F5397B404D8C3E297C08FC /* [CP] Check Pods Manifest.lock */,
 				57C7B05622CA6E7700C49AC0 /* Sources */,
 				57C7B05722CA6E7700C49AC0 /* Frameworks */,
 				57C7B05822CA6E7700C49AC0 /* Resources */,
@@ -265,12 +336,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10F5397B404D8C3E297C08FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetechLabsTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3582E8A267ABFC6337BE4913 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetechLabsTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72749FE92BC9B35F17618E54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetechLabsTest/Pods-RetechLabsTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetechLabsTest/Pods-RetechLabsTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57C7B03F22CA6E7600C49AC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				57C7B07022CA6F9B00C49AC0 /* MDProduct.swift in Sources */,
+				57ED71F622CBA41F003D625C /* BaseController.swift in Sources */,
 				57C7B07522CA756600C49AC0 /* UniqueObject.swift in Sources */,
 				57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */,
 				57C7B06D22CA6F0F00C49AC0 /* ProductsStorage.swift in Sources */,
@@ -438,6 +583,7 @@
 		};
 		57C7B06422CA6E7700C49AC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B820F075BAB98DF4C787DCDE /* Pods-RetechLabsTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,6 +603,7 @@
 		};
 		57C7B06522CA6E7700C49AC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6489B378B17717FBFD2CB890 /* Pods-RetechLabsTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +623,7 @@
 		};
 		57C7B06722CA6E7700C49AC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF78F132B0BA609277B1FCB /* Pods-RetechLabsTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +645,7 @@
 		};
 		57C7B06822CA6E7700C49AC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FA03668D16DBCEAF772D03 /* Pods-RetechLabsTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -1,0 +1,6 @@
+framework module Pods_RetechLabsTest {
+  umbrella header "Pods-RetechLabsTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
