@@ -15,4 +15,6 @@ protocol Storage {
     func saveToStorage(object: T)
     func removeFromStorage(object: T)
     func removeAll()
+    func replaceProduct(object: T)
+    func saveProducts(objects: [T])
 }

@@ -75,4 +75,20 @@ class ProductStorageTests: XCTestCase {
         XCTAssertEqual(7, fetchedProducts.count)
     }
     
+    
+    func test_change_productStorage() {
+        var product = MDProduct.init()
+        product.name = "Alex"
+        productStorage.saveToStorage(object: product)
+        
+        product.name = "John"
+        
+        productStorage.replaceProduct(object: product)
+        
+        let fetchedProduct = productStorage.getObjectsFromStorage().filter { (fetchedProduct) -> Bool in
+            return fetchedProduct == product
+        }.first
+        
+        XCTAssertEqual(fetchedProduct!.name, "John")
+    }
 }
