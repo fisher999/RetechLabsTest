@@ -46,11 +46,13 @@ class ProductView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         view = loadFromNib()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         view = loadFromNib()
+        setup()
     }
     
     func setup() {

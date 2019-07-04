@@ -54,11 +54,35 @@ extension ProductsListViewModel {
         removeProductAtIndexPath(indexPath)
         self.products.insert(product, at: indexPath.row)
     }
+    
+    fileprivate func attachPhotosCellTypesFor(_ indexPath: IndexPath) -> [AttachPhotoCell.CellType] {
+        guard let product = productAtIndexPath(indexPath: indexPath) else {return []}
+        var cells: [AttachPhotoCell.CellType] = []
+        let mapProducts = product.attachPhotos.map { (imageData) -> AttachPhotoCell.CellType in
+            return .photo(photo: UIImage(data: imageData), isLoaded: false)
+        }
+        cells.append(contentsOf: mapProducts)
+        cells.append(.addPhoto)
+        
+        return cells
+    }
 }
 
 //MARK: TableViewMethods
 extension ProductsListViewModel {
-    func cellForRowAtIndexPath(_ indexPath: IndexPath) -> MDProduct? {
-        return productAtIndexPath(indexPath: indexPath)
+    func cellForRowAtIndexPath(_ indexPath: IndexPath) -> ProductView.Model? {
+        guard let product = productAtIndexPath(indexPath: indexPath) else {return nil}
+        let count = String(product.count)
+        let productViewModel = ProductView.Model(name: product.name, count: count, attachPhotos: attachPhotosCellTypesFor(indexPath))
+        
+        return productViewModel
+    }
+}
+
+//MARK: events
+extension ProductsListViewModel {
+    func addButtonDidtapped() {
+        let product = MDProduct()
+        addProduct(product: product)
     }
 }

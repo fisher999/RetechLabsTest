@@ -12,9 +12,9 @@ class ProductCell: UITableViewCell, ReusableView, NibLoadableView {
     //MARK: IBOutlets
     @IBOutlet weak var productView: ProductView!
     
-    var model: MDProduct? {
+    var model: ProductView.Model? {
         didSet {
-            
+            productView.model = model
         }
     }
     

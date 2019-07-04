@@ -15,7 +15,7 @@ protocol AttachPhotoCellDelegate: class {
 
 class AttachPhotoCell: UICollectionViewCell, NibLoadableView, ReusableView {
     enum CellType {
-        case photo(photo:UIImage, isLoaded: Bool)
+        case photo(photo:UIImage?, isLoaded: Bool)
         case addPhoto
     }
     

@@ -46,6 +46,8 @@
 		57ED723422CC6BA5003D625C /* UIBezierPath+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED723022CC6BA5003D625C /* UIBezierPath+Percentage.swift */; };
 		57ED723522CC6BA5003D625C /* CGPoint+PointOnEllipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED723122CC6BA5003D625C /* CGPoint+PointOnEllipse.swift */; };
 		57ED723622CC6BA5003D625C /* Int+DegreesToRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED723222CC6BA5003D625C /* Int+DegreesToRadians.swift */; };
+		57FA1DE022CDA5FB0025DB71 /* ProductFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA1DDF22CDA5FB0025DB71 /* ProductFooter.swift */; };
+		57FA1DE222CDA60D0025DB71 /* ProductFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FA1DE122CDA60D0025DB71 /* ProductFooter.xib */; };
 		9C038FAF18235A2EB8BCB05B /* Pods_RetechLabsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694AAC50092777A3BA945D3 /* Pods_RetechLabsTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		57ED723022CC6BA5003D625C /* UIBezierPath+Percentage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Percentage.swift"; sourceTree = "<group>"; };
 		57ED723122CC6BA5003D625C /* CGPoint+PointOnEllipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+PointOnEllipse.swift"; sourceTree = "<group>"; };
 		57ED723222CC6BA5003D625C /* Int+DegreesToRadians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+DegreesToRadians.swift"; sourceTree = "<group>"; };
+		57FA1DDF22CDA5FB0025DB71 /* ProductFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFooter.swift; sourceTree = "<group>"; };
+		57FA1DE122CDA60D0025DB71 /* ProductFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductFooter.xib; sourceTree = "<group>"; };
 		6489B378B17717FBFD2CB890 /* Pods-RetechLabsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetechLabsTest.release.xcconfig"; path = "Target Support Files/Pods-RetechLabsTest/Pods-RetechLabsTest.release.xcconfig"; sourceTree = "<group>"; };
 		6694AAC50092777A3BA945D3 /* Pods_RetechLabsTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetechLabsTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B820F075BAB98DF4C787DCDE /* Pods-RetechLabsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetechLabsTest.debug.xcconfig"; path = "Target Support Files/Pods-RetechLabsTest/Pods-RetechLabsTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 		57ED721022CBC686003D625C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				57FA1DDE22CDA57C0025DB71 /* ProductFooter */,
 				57ED721922CC5168003D625C /* ProductView */,
 				57ED721122CBC68B003D625C /* ProductCell */,
 			);
@@ -370,6 +375,15 @@
 				57ED722D22CC6B8E003D625C /* OProgressView */,
 			);
 			path = ExternalLibs;
+			sourceTree = "<group>";
+		};
+		57FA1DDE22CDA57C0025DB71 /* ProductFooter */ = {
+			isa = PBXGroup;
+			children = (
+				57FA1DDF22CDA5FB0025DB71 /* ProductFooter.swift */,
+				57FA1DE122CDA60D0025DB71 /* ProductFooter.xib */,
+			);
+			path = ProductFooter;
 			sourceTree = "<group>";
 		};
 		5999B201DB11DCA381DD72AD /* Frameworks */ = {
@@ -480,6 +494,7 @@
 				57ED722C22CC6915003D625C /* AttachPhotoCell.xib in Resources */,
 				57ED722522CC665C003D625C /* AttachPhotosView.xib in Resources */,
 				57C7B07A22CA8AE700C49AC0 /* Default-568h@2x.png in Resources */,
+				57FA1DE222CDA60D0025DB71 /* ProductFooter.xib in Resources */,
 				57ED720F22CBC1FA003D625C /* ProductsListController.xib in Resources */,
 				57ED722222CC51E3003D625C /* CounterView.xib in Resources */,
 				57ED721622CBC8B5003D625C /* ProductCell.xib in Resources */,
@@ -598,6 +613,7 @@
 				57ED721522CBC8B5003D625C /* ProductCell.swift in Sources */,
 				57ED722022CC51D7003D625C /* CounterView.swift in Sources */,
 				57ED722722CC666A003D625C /* AttachPhotosView.swift in Sources */,
+				57FA1DE022CDA5FB0025DB71 /* ProductFooter.swift in Sources */,
 				57ED723522CC6BA5003D625C /* CGPoint+PointOnEllipse.swift in Sources */,
 				57ED720922CBBD3F003D625C /* Data+Array.swift in Sources */,
 				57ED723422CC6BA5003D625C /* UIBezierPath+Percentage.swift in Sources */,
