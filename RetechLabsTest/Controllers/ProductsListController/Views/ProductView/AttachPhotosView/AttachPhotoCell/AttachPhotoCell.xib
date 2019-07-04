@@ -27,12 +27,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-GL-jrI">
-                        <rect key="frame" x="34" y="34" width="32" height="32"/>
+                        <rect key="frame" x="30" y="30" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="32" id="b46-vE-Gvq"/>
-                            <constraint firstAttribute="height" constant="32" id="uDQ-3m-rpE"/>
+                            <constraint firstAttribute="width" constant="40" id="b46-vE-Gvq"/>
+                            <constraint firstAttribute="height" constant="40" id="uDQ-3m-rpE"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
                     </button>
                 </subviews>
             </view>

@@ -40,7 +40,8 @@
             <constraints>
                 <constraint firstItem="0Fb-rH-gko" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2aq-s0-jTr"/>
                 <constraint firstItem="2zS-e0-5Mc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Gx4-fV-api"/>
-                <constraint firstItem="0Fb-rH-gko" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Zbx-Xl-FUV"/>
+                <constraint firstItem="0Fb-rH-gko" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="M1J-CO-gzj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0Fb-rH-gko" secondAttribute="bottom" constant="8" id="l9i-mu-hN8"/>
                 <constraint firstItem="2zS-e0-5Mc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uAR-S0-hKb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

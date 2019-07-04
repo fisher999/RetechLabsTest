@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol ProductCellDelegate: class {
+    func productCell(didIncreaseButtonTapped counterView: CounterView, productCell: ProductCell)
+    func productCell(didDeacreaseButtonTapped counterView: CounterView, productCell: ProductCell)
+    func productCell(didTappedCancel attachPhotoCell: AttachPhotoCell, productCell: ProductCell, at indexPath: IndexPath?)
+    func productCell(didTappedAddPhoto attachPhotoCell: AttachPhotoCell, productCell: ProductCell)
+    func productCell(didSwitchAttachPhotos productCell: ProductCell, isAttachPhotos: Bool)
+}
+
 class ProductCell: UITableViewCell, ReusableView, NibLoadableView {
     //MARK: IBOutlets
     @IBOutlet weak var productView: ProductView!
@@ -18,19 +26,44 @@ class ProductCell: UITableViewCell, ReusableView, NibLoadableView {
         }
     }
     
-    var delegate: ProductViewDelegate? {
-        return productView.delegate
-    }
+    weak var delegate: ProductCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setup()
     }
     
     func setup() {
+        productView.delegate = self
         productView.layer.shadowColor = UIColor.black.cgColor
         productView.layer.shadowOpacity = 1
         productView.layer.shadowOffset = .zero
-        productView.layer.shadowRadius = 10
+        productView.layer.shadowRadius = 15
+        
+        selectionStyle = .none
     }
+}
+
+extension ProductCell: ProductViewDelegate {
+    func productView(didTappedCancel attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?) {
+        delegate?.productCell(didTappedCancel: attachPhotoCell, productCell: self, at: indexPath)
+    }
+    
+    func productView(didIncreaseButtonTapped counterView: CounterView) {
+        delegate?.productCell(didIncreaseButtonTapped: counterView, productCell: self)
+    }
+    
+    func productView(didDeacreaseButtonTapped counterView: CounterView) {
+        delegate?.productCell(didDeacreaseButtonTapped: counterView, productCell: self)
+    }
+    
+    func productView(didTappedAddPhoto attachPhotoCell: AttachPhotoCell) {
+        delegate?.productCell(didTappedAddPhoto: attachPhotoCell, productCell: self)
+    }
+    
+    func productView(didSwitchAttachPhotos attachView: AttachPhotosView, isAttachPhotos: Bool) {
+        delegate?.productCell(didSwitchAttachPhotos: self, isAttachPhotos: isAttachPhotos)
+    }
+    
+    
 }

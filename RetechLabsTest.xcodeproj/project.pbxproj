@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2090514C1839EEA355837AED /* Pods_RetechLabsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */; };
 		57C7B04722CA6E7600C49AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */; };
-		57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04822CA6E7600C49AC0 /* ViewController.swift */; };
-		57C7B04C22CA6E7600C49AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B04A22CA6E7600C49AC0 /* Main.storyboard */; };
 		57C7B04F22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */; };
 		57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05022CA6E7700C49AC0 /* Assets.xcassets */; };
 		57C7B05422CA6E7700C49AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */; };
@@ -65,8 +63,6 @@
 		26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetechLabsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C7B04322CA6E7600C49AC0 /* RetechLabsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetechLabsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57C7B04822CA6E7600C49AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		57C7B04B22CA6E7600C49AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57C7B04E22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetechLabsTest.xcdatamodel; sourceTree = "<group>"; };
 		57C7B05022CA6E7700C49AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C7B05322CA6E7700C49AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,7 +161,6 @@
 				57C7B06E22CA6F6400C49AC0 /* Model */,
 				57C7B06A22CA6E9500C49AC0 /* Base */,
 				57C7B06922CA6E8500C49AC0 /* Service */,
-				57C7B04822CA6E7600C49AC0 /* ViewController.swift */,
 				57C7B05022CA6E7700C49AC0 /* Assets.xcassets */,
 				57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */,
 			);
@@ -193,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				57C7B05522CA6E7700C49AC0 /* Info.plist */,
-				57C7B04A22CA6E7600C49AC0 /* Main.storyboard */,
 				57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */,
 				57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */,
 			);
@@ -499,7 +493,6 @@
 				57ED722222CC51E3003D625C /* CounterView.xib in Resources */,
 				57ED721622CBC8B5003D625C /* ProductCell.xib in Resources */,
 				57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */,
-				57C7B04C22CA6E7600C49AC0 /* Main.storyboard in Resources */,
 				57ED721D22CC51C2003D625C /* ProductView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,7 +593,6 @@
 				57ED723322CC6BA5003D625C /* OProgressView.swift in Sources */,
 				57ED71F622CBA41F003D625C /* BaseController.swift in Sources */,
 				57C7B07522CA756600C49AC0 /* UniqueObject.swift in Sources */,
-				57C7B04922CA6E7600C49AC0 /* ViewController.swift in Sources */,
 				57ED720022CBAFA3003D625C /* UITableView+Register.swift in Sources */,
 				57ED722B22CC6915003D625C /* AttachPhotoCell.swift in Sources */,
 				57ED720422CBB00F003D625C /* ReusableView.swift in Sources */,
@@ -641,14 +633,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		57C7B04A22CA6E7600C49AC0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57C7B04B22CA6E7600C49AC0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		57C7B05222CA6E7700C49AC0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

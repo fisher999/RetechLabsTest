@@ -43,7 +43,6 @@
                         <constraint firstItem="Pvj-aj-ogD" firstAttribute="top" secondItem="bi2-3X-ZBT" secondAttribute="top" constant="10" id="aQ8-Xa-yAS"/>
                         <constraint firstItem="jp6-4G-NTV" firstAttribute="leading" secondItem="bi2-3X-ZBT" secondAttribute="leading" constant="16" id="bG1-Vw-Ckk"/>
                         <constraint firstAttribute="height" constant="50" id="cp7-xz-s3b"/>
-                        <constraint firstAttribute="bottom" secondItem="jp6-4G-NTV" secondAttribute="bottom" constant="14" id="duu-Ds-1fa"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="paR-3k-bbQ">

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol AttachPhotosViewDelegate: class {
-    func attachPhotosView(didTappedCancel attachPhotoCell: AttachPhotoCell)
+    func attachPhotosView(didTappedCancel attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?)
     func attachPhotosView(didTappedAddPhoto attachPhotoCell: AttachPhotoCell)
     func attachPhotosView(didSwitchAttachPhotos attachPhotoView: AttachPhotosView, isAttachPhotos: Bool)
 }
@@ -42,8 +42,15 @@ class AttachPhotosView: UIView {
         view = loadFromNib()
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
     func setup() {
+        attachPhotosSwitch.isOn = false
         photosCollectionView.dataSource = self
+        photosCollectionView.delegate = self
         photosCollectionView.register(AttachPhotoCell.self)
         attachPhotosSwitch.addTarget(self, action: #selector(didSwitchAttachPhotos(sender:)), for: .valueChanged)
     }
@@ -60,12 +67,12 @@ extension AttachPhotosView {
 //MARK: IntrinsicContentSize
 extension AttachPhotosView {
     override var intrinsicContentSize: CGSize {
-        self.photosCollectionView.isHidden = self.attachPhotosSwitch.isOn
+        self.photosCollectionView.isHidden = !self.attachPhotosSwitch.isOn
         if self.attachPhotosSwitch.isOn {
-            self.collectionViewHeight.constant = 0
+            self.collectionViewHeight.constant = 133
         }
         else {
-            self.collectionViewHeight.constant = 133
+            self.collectionViewHeight.constant = 0
         }
         
         setNeedsLayout()
@@ -77,6 +84,7 @@ extension AttachPhotosView {
 //MARK: UICollectionViewDataSource
 extension AttachPhotosView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(model?.count)
         return model?.count ?? 0
     }
     
@@ -89,9 +97,17 @@ extension AttachPhotosView: UICollectionViewDataSource {
     }
 }
 
+extension AttachPhotosView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 100, height: 100)
+    }
+}
+
 extension AttachPhotosView: AttachPhotoCellDelegate {
     func attachPhotoCell(didTappedCancel cell: AttachPhotoCell) {
-        delegate?.attachPhotosView(didTappedCancel: cell)
+        let indexPath = self.photosCollectionView.indexPath(for: cell)
+        delegate?.attachPhotosView(didTappedCancel: cell, at: indexPath)
     }
     
     func attachPhotoCell(didTappedAddPhoto cell: AttachPhotoCell) {

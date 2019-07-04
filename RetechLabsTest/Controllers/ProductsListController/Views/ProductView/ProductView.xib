@@ -15,7 +15,7 @@
                 <outlet property="attachPhotosView" destination="bOz-Q2-xFb" id="32x-0s-VEE"/>
                 <outlet property="counterView" destination="kkd-Wl-pLK" id="Gfj-Pj-Bmo"/>
                 <outlet property="nameTextField" destination="MJb-UI-fPk" id="pFw-rK-PzY"/>
-                <outlet property="saveButton" destination="ZdA-h7-Cq4" id="pPL-6o-uzW"/>
+                <outlet property="removeButton" destination="ZdA-h7-Cq4" id="1dF-AA-bLn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="6Hy-tH-FeY"/>
             </connections>
         </placeholder>
@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-ag-hUp">
-                    <rect key="frame" x="9" y="9" width="349" height="40"/>
+                    <rect key="frame" x="9" y="9" width="346" height="40"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJb-UI-fPk">
-                            <rect key="frame" x="8" y="5" width="333" height="30"/>
+                            <rect key="frame" x="8" y="5" width="330" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -44,16 +44,18 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-h7-Cq4">
-                    <rect key="frame" x="374" y="14" width="25" height="25"/>
+                    <rect key="frame" x="371" y="14" width="32" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="QfI-B4-X0L"/>
-                        <constraint firstAttribute="height" constant="25" id="icc-MG-yVA"/>
+                        <constraint firstAttribute="height" constant="32" id="QFd-GG-FHr"/>
+                        <constraint firstAttribute="width" constant="32" id="tgR-k9-jOd"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
                 </button>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="176" placeholderIntrinsicHeight="87" translatesAutoresizingMaskIntoConstraints="NO" id="kkd-Wl-pLK" customClass="CounterView" customModule="RetechLabsTest" customModuleProvider="target">
-                    <rect key="frame" x="9" y="57" width="176" height="87"/>
+                    <rect key="frame" x="30" y="57" width="176" height="87"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="87" id="mRL-TU-u46"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="419" placeholderIntrinsicHeight="136" translatesAutoresizingMaskIntoConstraints="NO" id="bOz-Q2-xFb" customClass="AttachPhotosView" customModule="RetechLabsTest" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="144" width="419" height="136"/>
@@ -63,10 +65,10 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="2Nr-ag-hUp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="2sD-01-jfh"/>
+                <constraint firstAttribute="trailing" secondItem="ZdA-h7-Cq4" secondAttribute="trailing" constant="16" id="9pL-0i-8OQ"/>
                 <constraint firstAttribute="bottom" secondItem="bOz-Q2-xFb" secondAttribute="bottom" id="Hc4-if-SWB"/>
                 <constraint firstItem="bOz-Q2-xFb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IUa-Po-JDZ"/>
-                <constraint firstItem="kkd-Wl-pLK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="IfC-Hu-05J"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZdA-h7-Cq4" secondAttribute="trailing" constant="20" id="Q6h-OP-Lty"/>
+                <constraint firstItem="kkd-Wl-pLK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="IfC-Hu-05J"/>
                 <constraint firstItem="kkd-Wl-pLK" firstAttribute="top" secondItem="2Nr-ag-hUp" secondAttribute="bottom" constant="8" id="ZYw-Vh-eU2"/>
                 <constraint firstItem="bOz-Q2-xFb" firstAttribute="top" secondItem="kkd-Wl-pLK" secondAttribute="bottom" id="jG9-YP-egt"/>
                 <constraint firstItem="bOz-Q2-xFb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="l7J-WL-Jh8"/>

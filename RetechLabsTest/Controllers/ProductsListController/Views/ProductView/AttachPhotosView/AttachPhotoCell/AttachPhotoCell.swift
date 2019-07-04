@@ -52,8 +52,10 @@ class AttachPhotoCell: UICollectionViewCell, NibLoadableView, ReusableView {
                 self.cellActionButton.setImage(image, for: .normal)
             case .addPhoto:
                 self.cellActionButton.isHidden = false
+                self.progressCircleView.isHidden = true
                 let image = UIImage(named: "add")
                 self.cellActionButton.setImage(image, for: .normal)
+                self.cellActionButton.tintColor = UIColor.black
             }
         }
     }
