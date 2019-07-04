@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttachPhotosView" customModule="RetechLabsTest" customModuleProvider="target">
             <connections>
                 <outlet property="attachPhotosSwitch" destination="Pvj-aj-ogD" id="IUZ-5X-g5g"/>
+                <outlet property="collectionViewHeight" destination="GpV-K5-REd" id="7Id-MT-10f"/>
                 <outlet property="photosCollectionView" destination="paR-3k-bbQ" id="M53-ra-cGa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="xdH-yM-TRq"/>
             </connections>
@@ -48,6 +49,9 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="paR-3k-bbQ">
                     <rect key="frame" x="0.0" y="50" width="372" height="133"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="133" id="GpV-K5-REd"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mHN-8F-Daj">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>

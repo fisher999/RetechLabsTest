@@ -26,20 +26,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-GL-jrI">
+                        <rect key="frame" x="34" y="34" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="b46-vE-Gvq"/>
+                            <constraint firstAttribute="height" constant="32" id="uDQ-3m-rpE"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="hS6-XP-UfV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0F5-na-p21"/>
                 <constraint firstItem="tAH-oL-4YS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="1lz-f1-DWy"/>
+                <constraint firstItem="KTe-GL-jrI" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="58k-Y6-zwK"/>
                 <constraint firstItem="hS6-XP-UfV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HUn-iI-XxG"/>
                 <constraint firstAttribute="bottom" secondItem="tAH-oL-4YS" secondAttribute="bottom" constant="5" id="cxN-Wz-ITw"/>
                 <constraint firstAttribute="bottom" secondItem="hS6-XP-UfV" secondAttribute="bottom" id="eVH-eG-hVI"/>
                 <constraint firstItem="tAH-oL-4YS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="gOw-cP-tIj"/>
                 <constraint firstAttribute="trailing" secondItem="hS6-XP-UfV" secondAttribute="trailing" id="l5E-1H-ZgJ"/>
+                <constraint firstItem="KTe-GL-jrI" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="nEe-Ih-Mo8"/>
                 <constraint firstAttribute="trailing" secondItem="tAH-oL-4YS" secondAttribute="trailing" constant="5" id="pW6-s9-eiO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="100" height="102"/>
+            <connections>
+                <outlet property="cellActionButton" destination="KTe-GL-jrI" id="Nd0-Ik-UQi"/>
+                <outlet property="photoView" destination="tAH-oL-4YS" id="tW0-g2-Tad"/>
+                <outlet property="progressCircleView" destination="hS6-XP-UfV" id="OzJ-Dt-7Di"/>
+            </connections>
             <point key="canvasLocation" x="84.057971014492765" y="52.901785714285715"/>
         </collectionViewCell>
     </objects>

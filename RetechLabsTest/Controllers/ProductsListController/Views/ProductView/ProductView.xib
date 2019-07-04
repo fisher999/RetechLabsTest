@@ -10,10 +10,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductView" customModule="RetechLabsTest" customModuleProvider="target">
+            <connections>
+                <outlet property="attachPhotosView" destination="bOz-Q2-xFb" id="32x-0s-VEE"/>
+                <outlet property="counterView" destination="kkd-Wl-pLK" id="Gfj-Pj-Bmo"/>
+                <outlet property="nameTextField" destination="MJb-UI-fPk" id="pFw-rK-PzY"/>
+                <outlet property="saveButton" destination="ZdA-h7-Cq4" id="pPL-6o-uzW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6Hy-tH-FeY"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="419" height="230"/>
+            <rect key="frame" x="0.0" y="0.0" width="419" height="280"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-ag-hUp">
@@ -47,20 +55,28 @@
                     <rect key="frame" x="9" y="57" width="176" height="87"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="419" placeholderIntrinsicHeight="136" translatesAutoresizingMaskIntoConstraints="NO" id="bOz-Q2-xFb" customClass="AttachPhotosView" customModule="RetechLabsTest" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="144" width="419" height="136"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="2Nr-ag-hUp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="2sD-01-jfh"/>
+                <constraint firstAttribute="bottom" secondItem="bOz-Q2-xFb" secondAttribute="bottom" id="Hc4-if-SWB"/>
+                <constraint firstItem="bOz-Q2-xFb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IUa-Po-JDZ"/>
                 <constraint firstItem="kkd-Wl-pLK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="IfC-Hu-05J"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZdA-h7-Cq4" secondAttribute="trailing" constant="20" id="Q6h-OP-Lty"/>
                 <constraint firstItem="kkd-Wl-pLK" firstAttribute="top" secondItem="2Nr-ag-hUp" secondAttribute="bottom" constant="8" id="ZYw-Vh-eU2"/>
+                <constraint firstItem="bOz-Q2-xFb" firstAttribute="top" secondItem="kkd-Wl-pLK" secondAttribute="bottom" id="jG9-YP-egt"/>
+                <constraint firstItem="bOz-Q2-xFb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="l7J-WL-Jh8"/>
                 <constraint firstItem="ZdA-h7-Cq4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="lQm-xb-dji"/>
                 <constraint firstItem="ZdA-h7-Cq4" firstAttribute="leading" secondItem="2Nr-ag-hUp" secondAttribute="trailing" constant="16" id="pGr-SE-xV9"/>
                 <constraint firstItem="2Nr-ag-hUp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="tOi-Py-cSI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="44.20289855072464" y="34.151785714285715"/>
+            <point key="canvasLocation" x="44.20289855072464" y="50.892857142857139"/>
         </view>
     </objects>
 </document>

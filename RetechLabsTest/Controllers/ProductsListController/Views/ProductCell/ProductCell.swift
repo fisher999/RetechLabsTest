@@ -9,16 +9,28 @@
 import UIKit
 
 class ProductCell: UITableViewCell, ReusableView, NibLoadableView {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK: IBOutlets
+    @IBOutlet weak var productView: ProductView!
+    
+    var model: MDProduct? {
+        didSet {
+            
+        }
     }
     
+    var delegate: ProductViewDelegate? {
+        return productView.delegate
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
+    func setup() {
+        productView.layer.shadowColor = UIColor.black.cgColor
+        productView.layer.shadowOpacity = 1
+        productView.layer.shadowOffset = .zero
+        productView.layer.shadowRadius = 10
+    }
 }

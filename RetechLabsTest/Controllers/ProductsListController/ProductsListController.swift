@@ -33,10 +33,21 @@ class ProductsListController: BaseController {
     }
 
     func setup() {
-        
+        productsTableView.register(ProductCell.self)
     }
     
     func bind() {
         
+    }
+}
+
+//MARK: DataSource
+extension ProductsListController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
