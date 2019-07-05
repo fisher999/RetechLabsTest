@@ -18,6 +18,7 @@
 		57C7B07522CA756600C49AC0 /* UniqueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B07422CA756600C49AC0 /* UniqueObject.swift */; };
 		57C7B07822CA764800C49AC0 /* UserDefaults+Autoincrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */; };
 		57C7B07A22CA8AE700C49AC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */; };
+		57E3C74C22CF091D007C23C2 /* KeyboardNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3C74B22CF091D007C23C2 /* KeyboardNotificationHandler.swift */; };
 		57ED71F022CB94E5003D625C /* ProductStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED71EF22CB94E5003D625C /* ProductStorageTests.swift */; };
 		57ED71F622CBA41F003D625C /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED71F522CBA41F003D625C /* BaseController.swift */; };
 		57ED71F922CBAED6003D625C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED71F822CBAED6003D625C /* BaseViewModel.swift */; };
@@ -75,6 +76,7 @@
 		57C7B07422CA756600C49AC0 /* UniqueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueObject.swift; sourceTree = "<group>"; };
 		57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Autoincrement.swift"; sourceTree = "<group>"; };
 		57C7B07922CA8AE700C49AC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		57E3C74B22CF091D007C23C2 /* KeyboardNotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationHandler.swift; sourceTree = "<group>"; };
 		57ED71EF22CB94E5003D625C /* ProductStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStorageTests.swift; sourceTree = "<group>"; };
 		57ED71F522CBA41F003D625C /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		57ED71F822CBAED6003D625C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		57C7B06922CA6E8500C49AC0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				57E3C74A22CF0901007C23C2 /* KeyboardHandler */,
 				57C7B06B22CA6EF100C49AC0 /* ProductsStorage */,
 			);
 			path = Service;
@@ -230,6 +233,14 @@
 				57ED720822CBBD3F003D625C /* Data+Array.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57E3C74A22CF0901007C23C2 /* KeyboardHandler */ = {
+			isa = PBXGroup;
+			children = (
+				57E3C74B22CF091D007C23C2 /* KeyboardNotificationHandler.swift */,
+			);
+			path = KeyboardHandler;
 			sourceTree = "<group>";
 		};
 		57ED71F122CB9DE1003D625C /* Controllers */ = {
@@ -602,6 +613,7 @@
 				57ED720222CBAFF2003D625C /* NibLoadable.swift in Sources */,
 				57ED71FE22CBAF64003D625C /* UIView+Nib.swift in Sources */,
 				57ED71FC22CBAF30003D625C /* UICollectionView+RegisterCell.swift in Sources */,
+				57E3C74C22CF091D007C23C2 /* KeyboardNotificationHandler.swift in Sources */,
 				57ED721522CBC8B5003D625C /* ProductCell.swift in Sources */,
 				57ED722022CC51D7003D625C /* CounterView.swift in Sources */,
 				57ED722722CC666A003D625C /* AttachPhotosView.swift in Sources */,

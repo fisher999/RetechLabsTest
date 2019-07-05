@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RetechLabsTest/Controllers/ProductsListController/ProductsListController.swift"
-            timestampString = "583960243.426784"
+            timestampString = "583995260.075879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "productFooter(addButtonDidTapped:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RetechLabsTest/Controllers/ProductsListController/ViewModel/ProductsListViewModel.swift"
-            timestampString = "583960243.426908"
+            timestampString = "583995260.075978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "numberOfRows()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,12 +202,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RetechLabsTest/Controllers/ProductsListController/Views/ProductView/ProductView.swift"
-            timestampString = "583960243.427415"
+            timestampString = "583995260.076146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "model"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "changeSupportTextFieldColor"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RetechLabsTest/Controllers/ProductsListController/Views/ProductCell/ProductCell.swift"
-            timestampString = "583960243.427461"
+            timestampString = "583995260.076224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "model"
             landmarkType = "24">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RetechLabsTest/Controllers/ProductsListController/ViewModel/ProductsListViewModel.swift"
-            timestampString = "583960243.427844"
+            timestampString = "583995260.076327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "didIncreaseButtonTapped(at:counterView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,12 +266,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RetechLabsTest/Controllers/ProductsListController/ProductsListController.swift"
-            timestampString = "583960243.42791"
+            timestampString = "583995260.076383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "productCell(didIncreaseButtonTapped:productCell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetechLabsTest/Controllers/ProductsListController/ProductsListController.swift"
+            timestampString = "583995260.076427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "productCell(_:didFocusOnNameTextField:in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetechLabsTest/Controllers/ProductsListController/Views/ProductView/ProductView.swift"
+            timestampString = "583995260.076466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
-            landmarkName = "productCell(didIncreaseButtonTapped:productCell:)"
+            landmarkName = "textFieldShouldReturn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetechLabsTest/Service/KeyboardHandler/KeyboardNotificationHandler.swift"
+            timestampString = "583995260.076508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setup(withView:scrollView:activeFrameGetter:addTapGesture:bottomView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

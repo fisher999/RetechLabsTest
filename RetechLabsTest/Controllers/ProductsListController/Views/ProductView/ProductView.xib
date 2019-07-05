@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductView" customModule="RetechLabsTest" customModuleProvider="target">
             <connections>
                 <outlet property="attachPhotosView" destination="bOz-Q2-xFb" id="32x-0s-VEE"/>
+                <outlet property="borderTextFieldView" destination="2Nr-ag-hUp" id="Ff2-Du-GWf"/>
                 <outlet property="counterView" destination="kkd-Wl-pLK" id="Gfj-Pj-Bmo"/>
                 <outlet property="nameTextField" destination="MJb-UI-fPk" id="pFw-rK-PzY"/>
                 <outlet property="removeButton" destination="ZdA-h7-Cq4" id="1dF-AA-bLn"/>

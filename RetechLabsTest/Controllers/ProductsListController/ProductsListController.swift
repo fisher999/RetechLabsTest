@@ -17,6 +17,7 @@ class ProductsListController: BaseController {
     
     //MARK: Properties
     let viewModel: ProductsListViewModel
+    fileprivate var keyboardHandler = KeyboardNotificationHandler()
     
     //MARK: Init
     init(viewModel: ProductsListViewModel) {
@@ -33,6 +34,16 @@ class ProductsListController: BaseController {
         super.viewDidLoad()
         setup()
         bind()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         keyboardHandler.subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        keyboardHandler.unsubscribeFromKeyboardNotifications()
     }
 
     func setup() {
@@ -81,6 +92,15 @@ extension ProductsListController: ProductFooterDelegate {
 }
 
 extension ProductsListController: ProductCellDelegate {
+    func productCell(_ productCell: ProductCell, didFocusOnNameTextField nameTextField: UITextField, in productView: ProductView) {
+        keyboardHandler.setup(withView: view, scrollView: productsTableView, activeFrameGetter: productView)
+    }
+    
+    func productCell(_ productCell: ProductCell, in productView: ProductView, didChangeNameIn nameTextField: UITextField) {
+        let indexPath = productsTableView.indexPath(for: productCell)
+        viewModel.didNameChange(at: indexPath, nameTextField: nameTextField)
+    }
+    
     func productCell(didIncreaseButtonTapped counterView: CounterView, productCell: ProductCell) {
         let indexPath = productsTableView.indexPath(for: productCell)
         viewModel.didIncreaseButtonTapped(at: indexPath, counterView: counterView)

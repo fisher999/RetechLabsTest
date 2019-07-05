@@ -93,6 +93,16 @@ extension ProductsListViewModel {
         self.products.insert(changedProduct, at: indexPath.row)
     }
     
+    fileprivate func changeProductNameAtIndexPath(_ indexPath: IndexPath, by name: String) {
+        guard let product = productAtIndexPath(indexPath: indexPath) else {return}
+        removeProductAtIndexPath(indexPath)
+        var changedProduct = product
+        
+        changedProduct.name = name
+        
+        self.products.insert(changedProduct, at: indexPath.row)
+    }
+    
     fileprivate func attachPhotosCellTypesFor(_ indexPath: IndexPath) -> [AttachPhotoCell.CellType] {
         guard let product = productAtIndexPath(indexPath: indexPath) else {return []}
         var cells: [AttachPhotoCell.CellType] = []
@@ -149,5 +159,11 @@ extension ProductsListViewModel {
         if let cellModel = cellForRowAtIndexPath(index) {
             changeModelForCellAtIndexPathObserver.send(value: (cellModel, index))
         }
+    }
+    
+    func didNameChange(at indexPath: IndexPath?, nameTextField: UITextField) {
+        guard let index = indexPath else {return}
+        guard let name = nameTextField.text else {return}
+        changeProductNameAtIndexPath(index, by: name)
     }
 }
