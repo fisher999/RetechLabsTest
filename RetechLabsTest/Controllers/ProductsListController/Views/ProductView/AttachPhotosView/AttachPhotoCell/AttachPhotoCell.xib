@@ -21,10 +21,27 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tAH-oL-4YS">
                         <rect key="frame" x="5" y="5" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="tAH-oL-4YS" secondAttribute="height" multiplier="1:1" id="gBQ-bd-WGb"/>
+                        </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-XP-UfV" customClass="OProgressView" customModule="RetechLabsTest" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjO-Ap-Z5R">
+                                <rect key="frame" x="67" y="8" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="JZS-Pb-WLV"/>
+                                    <constraint firstAttribute="height" constant="25" id="s8Q-jc-lw7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gjO-Ap-Z5R" secondAttribute="trailing" constant="8" id="Ank-pT-pZS"/>
+                            <constraint firstItem="gjO-Ap-Z5R" firstAttribute="top" secondItem="hS6-XP-UfV" secondAttribute="top" constant="8" id="fwm-5b-jVR"/>
+                        </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-GL-jrI">
                         <rect key="frame" x="30" y="30" width="40" height="40"/>
@@ -53,6 +70,7 @@
                 <outlet property="cellActionButton" destination="KTe-GL-jrI" id="Nd0-Ik-UQi"/>
                 <outlet property="photoView" destination="tAH-oL-4YS" id="tW0-g2-Tad"/>
                 <outlet property="progressCircleView" destination="hS6-XP-UfV" id="OzJ-Dt-7Di"/>
+                <outlet property="removePhotoButton" destination="gjO-Ap-Z5R" id="d30-uu-HVc"/>
             </connections>
             <point key="canvasLocation" x="84.057971014492765" y="52.901785714285715"/>
         </collectionViewCell>

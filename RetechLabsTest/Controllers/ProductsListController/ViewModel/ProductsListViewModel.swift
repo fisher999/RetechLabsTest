@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveSwift
 import Result
+import UIKit
 
 class ProductsListViewModel: BaseViewModel {
     fileprivate enum SumType {
@@ -20,6 +21,8 @@ class ProductsListViewModel: BaseViewModel {
     private let productStorage: ProductStorage
     private var products: [MDProduct] = []
     
+    var imagePickerDidSelectedImage: ((UIImage) -> Void)?
+    
     //MARK: Reactive
     var reloadData: Signal<(), NoError>
     fileprivate var reloadDataObserver: Signal<(), NoError>.Observer
@@ -27,11 +30,19 @@ class ProductsListViewModel: BaseViewModel {
     var insertRows: Signal<[IndexPath], NoError>
     fileprivate var insertRowsObserver: Signal<[IndexPath], NoError>.Observer
     
+    var removerRows: Signal<[IndexPath], NoError>
+    fileprivate var removeRowsObserver: Signal<[IndexPath], NoError>.Observer
+    
     var updateTableHeight: Signal<(), NoError>
     fileprivate var updateTableHeightObserver: Signal<(), NoError>.Observer
     
     var changeModelForCellAtIndexPath: Signal<(ProductView.Model, IndexPath), NoError>
     fileprivate var changeModelForCellAtIndexPathObserver: Signal<(ProductView.Model, IndexPath), NoError>.Observer
+    
+    var showImagePickerSignal: Signal<UIImagePickerController, NoError>
+    fileprivate var showImagePickerObserver: Signal<UIImagePickerController, NoError>.Observer
+    
+    fileprivate var downloadingProducers: [SignalProducer<Float, NoError>] = []
     
     init(productStorage: ProductStorage = ProductStorage.shared) {
         self.productStorage = productStorage
@@ -39,6 +50,8 @@ class ProductsListViewModel: BaseViewModel {
         (insertRows, insertRowsObserver) = Signal.pipe()
         (updateTableHeight, updateTableHeightObserver) = Signal.pipe()
         (changeModelForCellAtIndexPath, changeModelForCellAtIndexPathObserver) = Signal.pipe()
+        (showImagePickerSignal, showImagePickerObserver) = Signal.pipe()
+        (removerRows, removeRowsObserver) = Signal.pipe()
         
         super.init()
     }
@@ -48,6 +61,7 @@ class ProductsListViewModel: BaseViewModel {
 extension ProductsListViewModel {
     fileprivate func getAllProducts() {
         self.products = productStorage.getObjectsFromStorage()
+        
     }
     
     fileprivate func productAtIndexPath(indexPath: IndexPath) -> MDProduct? {
@@ -70,10 +84,13 @@ extension ProductsListViewModel {
         return [IndexPath(row: products.count - 1, section: 0)]
     }
     
-    fileprivate func removeProductAtIndexPath(_ indexPath: IndexPath) {
-        guard indexPath.row < products.count else {return}
+    @discardableResult
+    fileprivate func removeProductAtIndexPath(_ indexPath: IndexPath) -> [IndexPath] {
+        guard indexPath.row < products.count else {return []}
+        let product = self.products.remove(at: indexPath.row)
+        productStorage.removeFromStorage(object: product)
         
-        self.products.remove(at: indexPath.row)
+        return [indexPath]
     }
     
     fileprivate func changeCountProductAtIndexPath(_ indexPath: IndexPath, by sumType: SumType) {
@@ -106,13 +123,42 @@ extension ProductsListViewModel {
     fileprivate func attachPhotosCellTypesFor(_ indexPath: IndexPath) -> [AttachPhotoCell.CellType] {
         guard let product = productAtIndexPath(indexPath: indexPath) else {return []}
         var cells: [AttachPhotoCell.CellType] = []
-        let mapProducts = product.attachPhotos.map { (imageData) -> AttachPhotoCell.CellType in
-            return .photo(photo: UIImage(data: imageData), isLoaded: false)
+        let mapProducts = product.attachPhotos.map { (image) -> AttachPhotoCell.CellType in
+            return .photo(photo: image, isLoaded: true)
         }
         cells.append(contentsOf: mapProducts)
         cells.append(.addPhoto)
         
         return cells
+    }
+    
+    fileprivate func save() {
+        productStorage.saveProducts(objects: self.products)
+    }
+    
+    fileprivate func addImageAtIndexPath(_ indexPath: IndexPath, image: UIImage) {
+        guard let product = productAtIndexPath(indexPath: indexPath) else {return}
+        removeProductAtIndexPath(indexPath)
+        var changedProduct = product
+        changedProduct.attachPhotos.append(image)
+        self.products.insert(changedProduct, at: indexPath.row)
+    }
+    
+    fileprivate func downloadingProducer() -> SignalProducer<Float, NoError> {
+        var downloadDuration: Int = 0
+        let producer = SignalProducer<Float, NoError>.init({ (observer, lifetime) in
+            _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+                observer.send(value: Float(timer.timeInterval) / 10)
+                downloadDuration += 1
+                if downloadDuration == 10 {
+                    timer.invalidate()
+                    
+                }
+            }
+        })
+        downloadingProducers.append(producer)
+        
+        return producer
     }
 }
 
@@ -132,12 +178,25 @@ extension ProductsListViewModel {
     }
 }
 
+//MARK: Preload
+extension ProductsListViewModel {
+    func preload() {
+        getAllProducts()
+    }
+}
+
 //MARK: events
 extension ProductsListViewModel {
     func addButtonDidtapped() {
         let product = MDProduct()
         let indexPaths = addProduct(product: product)
         insertRowsObserver.send(value: indexPaths)
+    }
+    
+    func removeButtonDidTapped(at indexPath: IndexPath?) {
+        guard let index = indexPath else {return}
+        let indexPaths = removeProductAtIndexPath(index)
+        removeRowsObserver.send(value: indexPaths)
     }
     
     func didSwitchAttachPhoto(_ isOn: Bool, in productCell: ProductCell) {
@@ -155,7 +214,6 @@ extension ProductsListViewModel {
     func didDeacreaseButtonTapped(at indexPath: IndexPath?, counterView: CounterView) {
         guard let index = indexPath else {return}
         changeCountProductAtIndexPath(index, by: .deacrement)
-        updateTableHeightObserver.send(value: ())
         if let cellModel = cellForRowAtIndexPath(index) {
             changeModelForCellAtIndexPathObserver.send(value: (cellModel, index))
         }
@@ -165,5 +223,45 @@ extension ProductsListViewModel {
         guard let index = indexPath else {return}
         guard let name = nameTextField.text else {return}
         changeProductNameAtIndexPath(index, by: name)
+    }
+    
+    func saveButtonDidTapped() {
+        save()
+        let products = productStorage.getObjectsFromStorage()
+        print(products.count)
+    }
+    
+    func didTappedCameraButton() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        showImagePickerObserver.send(value: imagePicker)
+    }
+    
+    func didTappedGalleryButton() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        showImagePickerObserver.send(value: imagePicker)
+    }
+    
+    func didTappedAddPhoto(at indexPath: IndexPath?, in attachCell: AttachPhotoCell) {
+        guard let index = indexPath else {return}
+        imagePickerDidSelectedImage = { [weak self] image in
+            guard let sself = self else {return}
+            sself.addImageAtIndexPath(index, image: image)
+            if let cellModel = sself.cellForRowAtIndexPath(index) {
+                sself.changeModelForCellAtIndexPathObserver.send(value: (cellModel, index))
+                sself.downloadingImage(in: attachCell)
+            }
+        }
+    }
+    
+    func downloadingImage(in attachCell: AttachPhotoCell) {
+        let producer = downloadingProducer()
+        attachCell.progress <~ producer
+        producer.start()
+    }
+    
+    func removePhotoAtIndexPath(atCell cellIndexPath: IndexPath, forPhotoItem itemIndexPath: IndexPath) {
+        
     }
 }

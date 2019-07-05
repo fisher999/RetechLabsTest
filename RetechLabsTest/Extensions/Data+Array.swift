@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
-extension Array where Element == Data {
+extension Array where Element == UIImage {
     func convert() -> Data {
         let mutableImageArray = NSMutableArray()
         
-        for dataImage in self {
-            mutableImageArray.add(dataImage)
+        for image in self {
+            if let dataImage = image.pngData() {
+                mutableImageArray.add(dataImage)
+            }
         }
         
         let attachPhotosData = NSKeyedArchiver.archivedData(withRootObject: mutableImageArray)

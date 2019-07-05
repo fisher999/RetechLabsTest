@@ -17,6 +17,8 @@ protocol ProductViewDelegate: class {
     func productView(didSwitchAttachPhotos attachView: AttachPhotosView, isAttachPhotos: Bool)
     func productView(_ productView: ProductView, didChangeNameIn nameTextField: UITextField)
     func productView(_ productView: ProductView, didFocusOnNameTextField: UITextField)
+    func productView(didTappedRemovedButton productView: ProductView)
+    func productView(_ productView: ProductView, didTappedRemovePhoto attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?)
 }
 
 class ProductView: UIView {
@@ -37,19 +39,11 @@ class ProductView: UIView {
     //MARK: Properties
     weak var delegate: ProductViewDelegate?
     
-    lazy var changeBorderTextFieldColor: ((_ isEmpty: Bool) -> Void)? = {[weak self] isEmpty in
-        if isEmpty {
-            self?.borderTextFieldView.backgroundColor = UIColor.lightGray
-        }
-        else {
-            self?.borderTextFieldView.backgroundColor = UIColor.white
-        }
-    }
-    
     var model: Model? {
         didSet {
             guard let validModel = model else {return}
             nameTextField.text = validModel.name
+            setupBorderTextFieldColor()
             counterView.countTitle = validModel.count
             attachPhotosView.model = validModel.attachPhotos
         }
@@ -72,9 +66,19 @@ class ProductView: UIView {
         attachPhotosView.delegate = self
         
         removeButton.setBackgroundImage(UIImage(named: "remove"), for: .normal)
+        removeButton.addTarget(self, action: #selector(didTappedRemoveButton), for: .touchUpInside)
         
         nameTextField.addTarget(self, action: #selector(didChangeName(_:)), for: .editingChanged)
         nameTextField.delegate = self
+    }
+    
+    func setupBorderTextFieldColor() {
+        if nameTextField.text?.isEmpty ?? true {
+            self.borderTextFieldView.backgroundColor = UIColor.lightGray
+        }
+        else {
+            self.borderTextFieldView.backgroundColor = UIColor.white
+        }
     }
 }
 
@@ -82,12 +86,17 @@ class ProductView: UIView {
 extension ProductView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         delegate?.productView(self, didFocusOnNameTextField: textField)
+        self.borderTextFieldView.backgroundColor = UIColor.lightGray
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        setupBorderTextFieldColor()
     }
 }
 
@@ -98,10 +107,14 @@ extension ProductView: ActiveFrameFieldGetter {
     }
 }
 
-//MARK: Text field action
+//MARK: actions
 extension ProductView {
     @objc func didChangeName(_ sender: UITextField) {
         delegate?.productView(self, didChangeNameIn: sender)
+    }
+    
+    @objc func didTappedRemoveButton() {
+        delegate?.productView(didTappedRemovedButton: self)
     }
 }
 
@@ -119,6 +132,10 @@ extension ProductView: CounterViewDelegate {
 }
 
 extension ProductView: AttachPhotosViewDelegate {
+    func attachPhotosView(didTappedRemovePhoto attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?) {
+        delegate?.productView(self, didTappedRemovePhoto: attachPhotoCell, at: indexPath)
+    }
+    
     func attachPhotosView(didTappedCancel attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?) {
         delegate?.productView(didTappedCancel: attachPhotoCell, at: indexPath)
     }

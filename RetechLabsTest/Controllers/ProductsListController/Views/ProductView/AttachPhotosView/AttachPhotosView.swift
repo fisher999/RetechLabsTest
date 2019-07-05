@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 protocol AttachPhotosViewDelegate: class {
+    func attachPhotosView(didTappedRemovePhoto attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?)
     func attachPhotosView(didTappedCancel attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?)
     func attachPhotosView(didTappedAddPhoto attachPhotoCell: AttachPhotoCell)
     func attachPhotosView(didSwitchAttachPhotos attachPhotoView: AttachPhotosView, isAttachPhotos: Bool)
@@ -52,6 +53,10 @@ class AttachPhotosView: UIView {
         photosCollectionView.dataSource = self
         photosCollectionView.delegate = self
         photosCollectionView.register(AttachPhotoCell.self)
+        photosCollectionView.showsHorizontalScrollIndicator = false
+        photosCollectionView.showsVerticalScrollIndicator = false
+        
+        
         attachPhotosSwitch.addTarget(self, action: #selector(didSwitchAttachPhotos(sender:)), for: .valueChanged)
     }
 }
@@ -105,6 +110,11 @@ extension AttachPhotosView: UICollectionViewDelegateFlowLayout {
 }
 
 extension AttachPhotosView: AttachPhotoCellDelegate {
+    func attachPhotoCell(didTappedRemovePhoto cell: AttachPhotoCell) {
+        let indexPath = self.photosCollectionView.indexPath(for: cell)
+        delegate?.attachPhotosView(didTappedRemovePhoto: cell, at: indexPath)
+    }
+    
     func attachPhotoCell(didTappedCancel cell: AttachPhotoCell) {
         let indexPath = self.photosCollectionView.indexPath(for: cell)
         delegate?.attachPhotosView(didTappedCancel: cell, at: indexPath)

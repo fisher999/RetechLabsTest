@@ -16,6 +16,8 @@ protocol ProductCellDelegate: class {
     func productCell(didSwitchAttachPhotos productCell: ProductCell, isAttachPhotos: Bool)
     func productCell(_ productCell: ProductCell, in productView: ProductView, didChangeNameIn nameTextField: UITextField)
     func productCell(_ productCell: ProductCell, didFocusOnNameTextField nameTextField: UITextField, in productView: ProductView)
+    func productCell(_ productCell: ProductCell, didTappedRemovedButtonIn productView: ProductView)
+    func productCell(_ productCell: ProductCell, productView: ProductView, didTappedRemovePhoto attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?)
 }
 
 class ProductCell: UITableViewCell, ReusableView, NibLoadableView {
@@ -47,6 +49,14 @@ class ProductCell: UITableViewCell, ReusableView, NibLoadableView {
 }
 
 extension ProductCell: ProductViewDelegate {
+    func productView(_ productView: ProductView, didTappedRemovePhoto attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?) {
+        delegate?.productCell(self, productView: productView, didTappedRemovePhoto: attachPhotoCell, at: indexPath)
+    }
+    
+    func productView(didTappedRemovedButton productView: ProductView) {
+        delegate?.productCell(self, didTappedRemovedButtonIn: productView)
+    }
+    
     func productView(_ productView: ProductView, didFocusOnNameTextField: UITextField) {
         delegate?.productCell(self, didFocusOnNameTextField: didFocusOnNameTextField, in: productView)
     }

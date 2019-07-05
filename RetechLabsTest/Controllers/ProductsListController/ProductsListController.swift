@@ -19,6 +19,18 @@ class ProductsListController: BaseController {
     let viewModel: ProductsListViewModel
     fileprivate var keyboardHandler = KeyboardNotificationHandler()
     
+    lazy fileprivate var didTappedCamera: () -> Void = { [weak self] in
+        self?.viewModel.didTappedCameraButton()
+    }
+    
+    lazy fileprivate var didTappedGallery: () -> Void = { [weak self] in
+        self?.viewModel.didTappedGalleryButton()
+    }
+    
+    lazy fileprivate var dismiss: () -> Void = { [weak self] in
+        self?.dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: Init
     init(viewModel: ProductsListViewModel) {
         self.viewModel = viewModel
@@ -57,8 +69,12 @@ class ProductsListController: BaseController {
         productsTableView.separatorStyle = .none
         productsTableView.rowHeight = UITableView.automaticDimension
         productsTableView.estimatedRowHeight = 300
+        
+        saveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
     
         productFooter.delegate = self
+        
+        viewModel.preload()
     }
     
     func bind() {
@@ -66,6 +82,15 @@ class ProductsListController: BaseController {
         productsTableView.reactive.reloadData <~ viewModel.reloadData
         updateTableHeight <~ viewModel.updateTableHeight
         changeModelForCell <~ viewModel.changeModelForCellAtIndexPath
+        showImagePickerController <~ viewModel.showImagePickerSignal
+        removeRows <~ viewModel.removerRows
+    }
+}
+
+//MARK: Button action
+extension ProductsListController {
+    @objc func didTapSaveButton() {
+        viewModel.saveButtonDidTapped()
     }
 }
 
@@ -92,6 +117,16 @@ extension ProductsListController: ProductFooterDelegate {
 }
 
 extension ProductsListController: ProductCellDelegate {
+    func productCell(_ productCell: ProductCell, productView: ProductView, didTappedRemovePhoto attachPhotoCell: AttachPhotoCell, at indexPath: IndexPath?) {
+        let indexPath = productsTableView.indexPath(for: productCell)
+        view
+    }
+    
+    func productCell(_ productCell: ProductCell, didTappedRemovedButtonIn productView: ProductView) {
+        let indexPath = productsTableView.indexPath(for: productCell)
+        viewModel.removeButtonDidTapped(at: indexPath)
+    }
+    
     func productCell(_ productCell: ProductCell, didFocusOnNameTextField nameTextField: UITextField, in productView: ProductView) {
         keyboardHandler.setup(withView: view, scrollView: productsTableView, activeFrameGetter: productView)
     }
@@ -117,7 +152,11 @@ extension ProductsListController: ProductCellDelegate {
     }
     
     func productCell(didTappedAddPhoto attachPhotoCell: AttachPhotoCell, productCell: ProductCell) {
-        //TODO
+    
+        let handlers = [("Камера", UIAlertAction.Style.default, didTappedCamera), ("Галерея", UIAlertAction.Style.default, didTappedGallery), ("Отмена", UIAlertAction.Style.destructive, dismiss)]
+        self.showActionSheet(title: nil, message: nil, handlers: handlers)
+        let indexPath = productsTableView.indexPath(for: productCell)
+        viewModel.didTappedAddPhoto(at: indexPath, in: attachPhotoCell)
     }
     
     func productCell(didSwitchAttachPhotos productCell: ProductCell, isAttachPhotos: Bool) {
@@ -132,6 +171,16 @@ extension ProductsListController {
             DispatchQueue.main.async {
                 self?.productsTableView.beginUpdates()
                 self?.productsTableView.insertRows(at: indexPaths, with: .bottom)
+                self?.productsTableView.endUpdates()
+            }
+        })
+    }
+    
+    var removeRows: BindingTarget<[IndexPath]> {
+        return BindingTarget<[IndexPath]>.init(lifetime: lifetime, action: {[weak self] (indexPaths) in
+            DispatchQueue.main.async {
+                self?.productsTableView.beginUpdates()
+                self?.productsTableView.deleteRows(at: indexPaths, with: .top)
                 self?.productsTableView.endUpdates()
             }
         })
@@ -152,5 +201,24 @@ extension ProductsListController {
             guard let cell = sself.productsTableView.cellForRow(at: indexPath) as? ProductCell else {return}
             cell.model = model
         })
+    }
+    
+    var showImagePickerController: BindingTarget<UIImagePickerController> {
+        return BindingTarget<UIImagePickerController>.init(lifetime: lifetime, action: {[weak self] (pickerController) in
+            guard let sself = self else {return}
+            pickerController.delegate = sself
+            
+            sself.present(pickerController, animated: true, completion: nil)
+        })
+    }
+}
+
+extension ProductsListController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
+        if let imagePickerDidSelectedImage = viewModel.imagePickerDidSelectedImage {
+            imagePickerDidSelectedImage(image)
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }

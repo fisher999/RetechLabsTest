@@ -91,4 +91,19 @@ class ProductStorageTests: XCTestCase {
         
         XCTAssertEqual(fetchedProduct!.name, "John")
     }
+    
+    func test_saveNumberOfProducts_productsStorage() {
+        var products: [MDProduct] = []
+        
+        for _ in 0 ..< 10 {
+            let product = MDProduct.init()
+            products.append(product)
+            productStorage.saveToStorage(object: product)
+        }
+        
+        productStorage.saveProducts(objects: products)
+        
+        let fetchedObjects = productStorage.getObjectsFromStorage()
+        XCTAssertEqual(products.count, 10)
+    }
 }

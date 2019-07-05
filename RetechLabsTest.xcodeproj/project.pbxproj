@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2090514C1839EEA355837AED /* Pods_RetechLabsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */; };
+		575A8CBC22CFC81300EFB264 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A8CBB22CFC81300EFB264 /* UIViewController+Alert.swift */; };
+		575A8CBE22CFDB0C00EFB264 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A8CBD22CFDB0C00EFB264 /* UIImage+Crop.swift */; };
 		57C7B04722CA6E7600C49AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */; };
 		57C7B04F22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C7B04D22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodeld */; };
 		57C7B05122CA6E7700C49AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C7B05022CA6E7700C49AC0 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		26DE9DA7946EA3C359C26ADC /* Pods_RetechLabsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetechLabsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		575A8CBB22CFC81300EFB264 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		575A8CBD22CFDB0C00EFB264 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		57C7B04322CA6E7600C49AC0 /* RetechLabsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetechLabsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C7B04622CA6E7600C49AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57C7B04E22CA6E7600C49AC0 /* RetechLabsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetechLabsTest.xcdatamodel; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				57C7B07722CA764800C49AC0 /* UserDefaults+Autoincrement.swift */,
 				57ED71FD22CBAF64003D625C /* UIView+Nib.swift */,
 				57ED720822CBBD3F003D625C /* Data+Array.swift */,
+				575A8CBB22CFC81300EFB264 /* UIViewController+Alert.swift */,
+				575A8CBD22CFDB0C00EFB264 /* UIImage+Crop.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -615,8 +621,10 @@
 				57ED71FC22CBAF30003D625C /* UICollectionView+RegisterCell.swift in Sources */,
 				57E3C74C22CF091D007C23C2 /* KeyboardNotificationHandler.swift in Sources */,
 				57ED721522CBC8B5003D625C /* ProductCell.swift in Sources */,
+				575A8CBC22CFC81300EFB264 /* UIViewController+Alert.swift in Sources */,
 				57ED722022CC51D7003D625C /* CounterView.swift in Sources */,
 				57ED722722CC666A003D625C /* AttachPhotosView.swift in Sources */,
+				575A8CBE22CFDB0C00EFB264 /* UIImage+Crop.swift in Sources */,
 				57FA1DE022CDA5FB0025DB71 /* ProductFooter.swift in Sources */,
 				57ED723522CC6BA5003D625C /* CGPoint+PointOnEllipse.swift in Sources */,
 				57ED720922CBBD3F003D625C /* Data+Array.swift in Sources */,

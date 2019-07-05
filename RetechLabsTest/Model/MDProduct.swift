@@ -8,12 +8,13 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 struct MDProduct {
     let id: Int
     var name: String
     var count: Int
-    var attachPhotos: [Data]
+    var attachPhotos: [UIImage]
     
     init(from managedObject: Product) {
         self.id = Int(managedObject.id)
@@ -28,8 +29,14 @@ struct MDProduct {
         self.count = Int(managedObject.count)
         
         if let attachPhotosData = managedObject.attachPhotos, let imagesNSArray = NSKeyedUnarchiver.unarchiveObject(with: attachPhotosData) as? NSArray {
-            if let photosArray = imagesNSArray as? Array<Data> {
-                self.attachPhotos = photosArray
+            if let dataArray = imagesNSArray as? Array<Data> {
+                var images: [UIImage] = []
+                for data in dataArray {
+                    if let image = UIImage(data: data) {
+                        images.append(image)
+                    }
+                }
+                self.attachPhotos = images
             }
             else {
                 self.attachPhotos = []
